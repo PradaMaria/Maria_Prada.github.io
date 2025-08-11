@@ -1,95 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - María Prada</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-        header { background: #e6c6c0; padding: 30px; text-align: center; }
-        header h1 { margin: 0; }
-        section { padding: 20px; max-width: 900px; margin: auto; }
-        h2 { color: #a85d5d; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 10px; }
-        .project { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .skills span { display: inline-block; background: #e6c6c0; padding: 5px 10px; margin: 3px; border-radius: 5px; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>María Prada — Ingeniería de Sistemas | IA & Automatización</title>
+  <meta name="description" content="María Prada — Estudiante de Ingeniería de Sistemas. Experiencia en automatización, integraciones API, Google Workspace y desarrollo para hotelería." />
+  <!-- Open Graph (cuando compartas en redes) -->
+  <meta property="og:title" content="María Prada — IA & Automatización" />
+  <meta property="og:description" content="Automatización, chatbots, integraciones PMS, Google Apps Script. Portafolio de proyectos." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#faf8f6; --card:#ffffff; --accent:#dbaaa3; --accent-dark:#a85d5d; --text:#222;
+      --muted:#666; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.5}
+    .container{max-width:1000px;margin:28px auto;padding:20px}
+    header{display:flex;gap:20px;align-items:center;padding:20px;background:linear-gradient(90deg, #fff 0%, #fff 60%);border-radius:var(--radius);box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+    .avatar{width:120px;height:120px;border-radius:14px;overflow:hidden;flex:0 0 120px;background:#eee;display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .hero h1{margin:0;font-size:24px;color:var(--accent-dark)} .hero p{margin:6px 0;color:var(--muted)}
+    .cta{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:white;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent-dark)}
+    section{margin-top:20px}
+    h2{color:var(--accent-dark);margin:0 0 10px 0}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .projects .project{padding:12px;border-radius:10px;border:1px solid #f0e9e8;margin-bottom:12px}
+    .meta{font-size:13px;color:var(--muted)}
+    .skills span{display:inline-block;background:#f7eaea;color:var(--accent-dark);padding:6px 8px;margin:4px;border-radius:999px;font-size:13px}
+    ul.timeline{padding-left:16px;margin:0}
+    ul.timeline li{margin-bottom:8px}
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:14px}
+    /* responsive */
+    @media(max-width:880px){ .grid{grid-template-columns:1fr} header{flex-direction:row} .avatar{width:96px;height:96px} }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <!-- SUBE profile.jpg a la raíz del repo -->
+        <img src="profile.jpg" alt="Foto María Prada" />
+      </div>
+      <div class="hero">
+        <h1>María Prada</h1>
+        <p>Estudiante de Ingeniería de Sistemas — Desarrollo, IA y Automatización aplicado a hotelería.</p>
+        <div class="cta">
+          <a class="btn" href="cv-maria-prada.pdf" download>Descargar CV (PDF)</a>
+          <a class="btn btn-outline" href="mailto:mariar.pradapinto@gmail.com">Contactar por correo</a>
+          <a class="btn btn-outline" href="https://linkedin.com/in/TU-USUARIO" target="_blank">LinkedIn</a>
+        </div>
+        <p class="meta">Bogotá D.C · Tel: 3005313105 · Inglés A1-B2 · Francés A2</p>
+      </div>
+    </header>
 
-<header>
-    <h1>María Prada</h1>
-    <p>Estudiante de Ingeniería de Sistemas | Apasionada por la IA, la automatización y el desarrollo</p>
-</header>
+    <section class="grid">
+      <!-- columna principal -->
+      <div>
+        <div class="card projects">
+          <h2>Proyectos destacados</h2>
 
-<section>
-    <h2>Sobre mí</h2>
-    <p>Trabajo en tecnología para un operador hotelero, con experiencia en soporte técnico, desarrollo, seguridad e infraestructura. Me especializo en automatización de procesos, integraciones con APIs y soluciones tecnológicas que optimizan operaciones.</p>
-</section>
+          <div class="project">
+            <h3>Automatización de cuentas de cobro</h3>
+            <p class="meta">Google Apps Script → envía cuentas de cobro automáticamente según archivo plano a copropietarios.</p>
+            <p>Resultado: reducción de tiempo manual y errores en la facturación.</p>
+          </div>
 
-<section>
-    <h2>Proyectos destacados</h2>
-    <div class="project">
-        <h3>Automatización de cuentas de cobro</h3>
-        <p>Script en Google Apps Script que envía cuentas de cobro automáticamente según archivo plano a copropietarios.</p>
-        <small>Tecnologías: Google Apps Script, Google Workspace</small>
-    </div>
-    <div class="project">
-        <h3>Chatbots para recepción de hoteles</h3>
-        <p>Implementación de chatbots con Builderbot para responder preguntas frecuentes de huéspedes en 3 hoteles.</p>
-        <small>Tecnologías: Builderbot, APIs</small>
-    </div>
-    <div class="project">
-        <h3>Dashboard de producción hotelera</h3>
-        <p>Interfaz que consume datos vía NAT desde PMS de hoteles para cálculo de comisiones.</p>
-        <small>Tecnologías: Oracle, SQL, API</small>
-    </div>
-</section>
+          <div class="project">
+            <h3>Chatbots para recepción</h3>
+            <p class="meta">Builderbot → chatbots desplegados en 3 hoteles para responder preguntas frecuentes.</p>
+            <p>Mejoró el tiempo de respuesta al huésped y descargó trabajo del front desk.</p>
+          </div>
 
-<section>
-    <h2>Habilidades</h2>
-    <div class="skills">
-        <span>Python</span>
-        <span>JavaScript</span>
-        <span>PHP</span>
-        <span>Bootstrap</span>
-        <span>SQL</span>
-        <span>Google Apps Script</span>
-        <span>RPA</span>
-        <span>Scrum</span>
-        <span>IA (ChatGPT, Gemini, Copilot)</span>
-        <span>Looker Studio</span>
-        <span>Canva</span>
-        <span>Figma</span>
-    </div>
-</section>
+          <div class="project">
+            <h3>Dashboard de producción e ingresos</h3>
+            <p class="meta">Integraciones con PMS (Opera, NetSuite), Oracle, Zeus SQL y APIs.</p>
+            <p>Interfaz que consume datos por NAT para calcular comisiones y reportes automáticos.</p>
+          </div>
 
-<section>
-    <h2>Experiencia laboral</h2>
-    <ul>
-        <li><strong>OxoHotel SAS</strong> – Analista de desarrollo (2024-Actualidad)</li>
-        <li><strong>Zona Occidente SAS (OxoHotel)</strong> – Coordinadora IT (2023-2024)</li>
-        <li><strong>OxoHotel</strong> – Pasante IT (2022-2023)</li>
-    </ul>
-</section>
+          <div class="project">
+            <h3>App CRUD Inventario (AppSheet)</h3>
+            <p class="meta">AppSheet no-code → gestión de inventario y activos para operaciones.</p>
+            <p>Incluye generación automática de certificados y estados de cuenta por plantilla.</p>
+          </div>
 
-<section>
-    <h2>Certificaciones y cursos</h2>
-    <ul>
-        <li>Programación MinTic</li>
-        <li>VMWare y Antivirus Kaspersky</li>
-        <li>Inglés A1-B2 | Francés A2</li>
-    </ul>
-</section>
+          <div class="project">
+            <h3>Scripts y automatizaciones</h3>
+            <p class="meta">Python, Google Apps Script, JS</p>
+            <ul>
+              <li>Script de ingresos (producto negociado con Zeus)</li>
+              <li>Automatización de alertas y wallpapers para endomarketing</li>
+              <li>Mesa de ayuda: tickets generados desde correo (HTML/JS)</li>
+            </ul>
+          </div>
 
-<section>
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:mariar.pradapinto@gmail.com">mariar.pradapinto@gmail.com</a></p>
-    <p>Teléfono: 3005313105</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/TU-USUARIO" target="_blank">linkedin.com/in/TU-USUARIO</a></p>
-    <p>GitHub: <a href="https://github.com/TU-USUARIO" target="_blank">github.com/TU-USUARIO</a></p>
-</section>
+        </div>
 
+        <div class="card" style="margin-top:16px">
+          <h2>Educación</h2>
+          <ul class="timeline">
+            <li><strong>Ingeniería de Sistemas</strong> — UNAD (2023 - Actualmente)</li>
+            <li><strong>Técnico en programación de software</strong> — SENA (2020 - 2023)</li>
+            <li><strong>Programación</strong> — Programa MinTic</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Herramientas y tecnologías</h2>
+          <div class="skills">
+            <span>Python</span><span>JavaScript</span><span>Google Apps Script</span><span>SQL</span>
+            <span>PHP</span><span>AppSheet</span><span>Builderbot</span><span>RPA (básico)</span>
+            <span>Looker Studio</span><span>Oracle / Zeus</span><span>Git / GitHub</span><span>Figma / Canva</span>
+            <span>IA: ChatGPT / Gemini / Copilot</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- columna lateral -->
+      <aside>
+        <div class="card">
+          <h2>Experiencia laboral</h2>
+          <ul>
+            <li><strong>OxoHotel SAS</strong> – Analista de desarrollo (04/24 - Actualidad)</li>
+            <li><strong>Zona Occidente SAS</strong> – Coordinadora IT (05/23 - 04/24)</li>
+            <li><strong>OxoHotel</strong> – Pasante IT (12/22 - 05/23)</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Certificados & cursos</h2>
+          <ul>
+            <li>Programación MinTic</li>
+            <li>VMware & Kaspersky</li>
+            <li>Scrum (básico)</li>
+            <li>Inglés A1–B2 / Francés A2</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Contacto</h2>
+          <p class="meta">Email: <a href="mailto:mariar.pradapinto@gmail.com">mariar.pradapinto@gmail.com</a></p>
+          <p class="meta">Tel: 3005313105</p>
+          <p class="meta">GitHub: <a href="https://github.com/PradaMaria" target="_blank">github.com/PradaMaria</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      © <span id="year"></span> María Prada — Portafolio · Hecho con ❤️ · Diseñado para IA y automatización
+    </footer>
+  </div>
+
+  <script>
+    // Año en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
